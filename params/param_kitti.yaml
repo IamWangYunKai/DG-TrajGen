@@ -1,0 +1,58 @@
+# basedir: '/media/wang/Dataset/kitti_raw_data'
+# basedir: '/media/zdk/Dataset/kitti_raw_data'
+basedir: '/media/wang/Data/kitti_raw_data'
+
+num_thread: 22
+
+
+trajectory_length: 30
+vehicle_width: 2.1
+correction_length: 0.32
+lateral_step_factor: 0.95
+
+### perspective mapping
+pm:
+    image_width: 1242
+    image_height: 375
+    save: false
+
+    type_threshold: 0.17  # angular velocity
+    type_save: true
+
+### inverse perspective mapping
+ipm:
+    image_width: 400
+    image_height: 200
+    save: false
+
+    longitudinal_length: 30.0
+    kernel_size: 21  # for GaussianBlur
+
+costmap:
+    image_width: 400
+    image_height: 200
+    save: false
+
+image:
+    image_width: 400
+    image_height: 200
+
+
+nav_map:
+    resolution: 0.03  # m/pix
+    save: false
+
+route_map:
+    resolution: 0.5  # m/pix
+    padding_length: 20.0  # m
+    vehicle_width: 2.1
+    correction_length: 0.32
+    lateral_step_factor: 0.95
+
+
+
+
+net:
+    ### net trajectory
+    num_costmap: 10
+    num_trajectory: 30

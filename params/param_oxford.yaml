@@ -1,0 +1,66 @@
+# basedir:
+#     - '/media/ff/Oxford/oxford_radar'
+#     - '/media/ff/CYX/oxford_radar_part2'
+# utils_basedir: '/home/ff/github/zju/robo-dataset-utils/robo_utils/oxford/'
+
+basedir:
+    - '/media/wang/Oxford/oxford_radar'
+    - '/media/wang/CYX/oxford_radar_part2'
+utils_basedir: '/home/wang/github/ZJU-Robotics-Lab/robo-dataset-utils/robo_utils/oxford/'
+
+
+num_thread: 22
+
+
+trajectory_length: 30
+vehicle_width: 4.0
+correction_length: 0.0
+lateral_step_factor: 0.95
+
+### perspective mapping
+pm:
+    image_width: 1280
+    image_height: 960
+
+    save: false
+
+    type_threshold: 0.17  # delta yaw
+    type_save: false
+
+### inverse perspective mapping
+ipm:
+    image_width: 400
+    image_height: 200
+
+    longitudinal_length: 30.0
+    kernel_size: 21  # for GaussianBlur
+
+costmap:
+    image_width: 400
+    image_height: 200
+    save: false
+image:
+    save: false
+    image_width: 400
+    image_height: 200
+
+
+nav_map:
+    resolution: 0.08  # m/pix
+    save: false
+
+route_map:
+    resolution: 0.5  # m/pix
+    padding_length: 20.0  # m
+    vehicle_width: 2.1
+    correction_length: 0.32
+    lateral_step_factor: 0.95
+
+
+
+net:
+    ### net trajectory
+    num_costmap: 16
+    num_trajectory: 48
+    normalize_length: 25.0
+    normalize_speed: 10.0
