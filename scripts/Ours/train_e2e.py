@@ -8,8 +8,6 @@ import random
 import argparse
 import numpy as np
 from datetime import datetime
-import cv2
-import seaborn as sns
 
 import matplotlib.pyplot as plt
 plt.rcParams.update({'figure.max_open_warning': 0})

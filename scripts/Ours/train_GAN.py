@@ -6,7 +6,6 @@ sys.path.insert(0, join(dirname(__file__), '../../'))
 import os
 import random
 import argparse
-import numpy as np
 from datetime import datetime
 
 import matplotlib.pyplot as plt

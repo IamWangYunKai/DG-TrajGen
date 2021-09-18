@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import sys
 from os.path import join, dirname
-sys.path.insert(0, join(dirname(__file__), '../../'))
+sys.path.insert(0, join(dirname(__file__), './../../'))
 
 import os
 import time
@@ -18,7 +18,7 @@ import torch
 from torch.utils.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
 
-from learning.boost_model import ModelMixStyleWithV
+from learning.model import ModelMixStyleWithV
 from carla_utils import parse_yaml_file_unsafe
 from learning.dataset import CARLADataset
 from robo_utils.oxford.oxford_dataset import DIVADataset
