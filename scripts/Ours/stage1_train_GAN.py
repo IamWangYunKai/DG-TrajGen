@@ -58,10 +58,8 @@ if not opt.test_mode:
     logger = SummaryWriter(log_dir=log_path)
     write_params(log_path, parser, description)
 
-
 generator = Generator(input_dim=1+1+opt.vector_dim, output=2).to(device)
 discriminator = Discriminator(opt.points_num*2+1).to(device)
-
 
 # generator.load_state_dict(torch.load('result/saved_models/train-gan-data-01/generator_66600.pth'))
 # discriminator.load_state_dict(torch.load('result/saved_models/train-gan-data-01/discriminator_66600.pth'))
@@ -71,7 +69,6 @@ criterion = torch.nn.BCELoss()
 trajectory_criterion = torch.nn.MSELoss()
 g_optimizer = torch.optim.RMSprop(generator.parameters(), lr=opt.lr, weight_decay=opt.weight_decay)
 d_optimizer = torch.optim.RMSprop(discriminator.parameters(), lr=opt.lr, weight_decay=opt.weight_decay)
-
 
 param = parse_yaml_file_unsafe('../../params/param_oxford.yaml')
 train_loader = DataLoader(GANDataset(param, mode='train', opt=opt), batch_size=opt.batch_size, shuffle=False, num_workers=opt.n_cpu)

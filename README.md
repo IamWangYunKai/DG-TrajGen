@@ -15,11 +15,11 @@ The official repository for paper ''**Domain Generalization for Vision-based Dri
 * **Latent Action Space Learning**:
   * Generator model: ./learning/model.py/Generator
   * Discriminator model: ./learning/model.py/Discriminator
-  * Training: ./scripts/Ours/train_GAN.py
+  * Training: ./scripts/Ours/stage1_train_GAN.py
 * **Encoder Pre-training**:
-  * Training: ./scripts/Ours/pretrain_encoder.py
-* **End-to-End Training**:
-  * Training: ./scripts/Ours/train_e2e.py
+  * Training: ./scripts/Ours/stage2_pretrain_encoder.py
+* **End-to-End Training the Encoder**:
+  * Training: ./scripts/Ours/stage3_train_e2e.py
 
 ## Comparative Study
 * RIP:
@@ -37,7 +37,7 @@ The official repository for paper ''**Domain Generalization for Vision-based Dri
 * DAL:
   * Training: ./scripts/DAL/train.py
 * E2E NT:
-  * Training: TODO
+  * Training: ./scripts/E2ENT/train.py
   * Referenced official code: [github](https://github.com/ZJU-Robotics-Lab/CICT)
   * Paper: [arxiv](https://arxiv.org/abs/2010.10393)
 
@@ -54,7 +54,7 @@ We train the model on the Oxford RobotCar dataset and **directly generalize** it
 ![HeavyFogMorning](./imgs/HeavyFogMorning.gif)
 
 
-### Citation
+## Citation
 If you use our source code, please consider citing the following:
 ```bibtex
 @article{wang2021domain,
