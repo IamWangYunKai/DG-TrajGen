@@ -1,5 +1,6 @@
 # DG-TrajGen
 The official repository for paper ''**Domain Generalization for Vision-based Driving Trajectory Generation'**' submitted to ICRA 2022.
+
 [![arXiv](https://img.shields.io/badge/arXiv-2109.13858-B31B1B.svg)](https://arxiv.org/abs/2109.13858)
 [![Project](https://img.shields.io/badge/Project-Site-orange.svg)](https://sites.google.com/view/dg-traj-gen/)
 [![YouTube](https://img.shields.io/badge/YouTube-Video-green.svg)](https://www.youtube.com/watch?v=hvuUtPz8U24&t=9s)
