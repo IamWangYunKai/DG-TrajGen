@@ -1,6 +1,10 @@
 # DG-TrajGen
 The official repository for paper ''**Domain Generalization for Vision-based Driving Trajectory Generation'**' submitted to ICRA 2022.
-
+[![arXiv](https://img.shields.io/badge/arXiv-2109.13858-B31B1B.svg)](https://arxiv.org/abs/2109.13858)
+[![Project](https://img.shields.io/badge/Project-Site-orange.svg)](https://sites.google.com/view/dg-traj-gen/)
+[![YouTube](https://img.shields.io/badge/YouTube-Video-green.svg)](https://www.youtube.com/watch?v=hvuUtPz8U24&t=9s)
+[![Bilibili](https://img.shields.io/badge/Bilibili-Video-blue.svg)](https://www.bilibili.com/video/BV1AQ4y167hc?spm_id_from=333.999.0.0)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Our Method
 ![structure](./imgs/structure.png)
@@ -12,7 +16,7 @@ The official repository for paper ''**Domain Generalization for Vision-based Dri
   * Discriminator model: ./learning/model.py/Discriminator
   * Training: ./scripts/Ours/train_GAN.py
 * **Encoder Pre-training**:
-  * Training: TODO
+  * Training: ./scripts/Ours/pretrain_encoder.py
 * **End-to-End Training**:
   * Training: ./scripts/Ours/train_e2e.py
 
