@@ -54,3 +54,13 @@ We train the model on the Oxford RobotCar dataset and **directly generalize** it
 ![HeavyFogMorning](./imgs/HeavyFogMorning.gif)
 
 
+### Citation
+If you use our source code, please consider citing the following:
+```bibtex
+@article{wang2021domain,
+  title={Domain Generalization for Vision-based Driving Trajectory Generation},
+  author={Wang, Yunkai and Zhang, Dongkun and Cui, Yuxiang and Chen, Zexi and Jing, Wei and Chen, Junbo and Xiong, Rong and Wang, Yue},
+  journal={arXiv preprint arXiv:2109.13858},
+  year={2021}
+}
+```
