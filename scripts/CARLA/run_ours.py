@@ -335,7 +335,7 @@ def main():
         vehicle.apply_control(control)
 
         speed_list.append(global_v0)
-        visualize(global_view_img, global_nav
+        visualize(global_view_img, global_nav)
         #time.sleep(1/60.)
 
     cv2.destroyAllWindows()

@@ -35,7 +35,7 @@ parser.add_argument('--dataset_name', type=str, default="train-gan-01", help='na
 parser.add_argument('--width', type=int, default=400, help='image width')
 parser.add_argument('--height', type=int, default=200, help='image height')
 parser.add_argument('--scale', type=float, default=30., help='longitudinal length')
-parser.add_argument('--batch_size', type=int, default=32, help='size of the batches')
+parser.add_argument('--batch_size', type=int, default=64, help='size of the batches')
 parser.add_argument('--vector_dim', type=int, default=64, help='vector dim')
 parser.add_argument('--points_num', type=int, default=16, help='points number')
 parser.add_argument('--weight_decay', type=float, default=5e-4, help='adam: weight_decay')
@@ -172,8 +172,8 @@ for i, batch in enumerate(train_loader):
     pred_real = discriminator(real_traj_with_condition)
     
     fake_traj = output_xy.view(-1, opt.points_num*2)
-    vx = (opt.max_dist/opt.max_t)*grad(output_xy.view(-1, opt.points_num, 2)[:,0].sum(), batch['t'], create_graph=True)[0]
-    vy = (opt.max_dist/opt.max_t)*grad(output_xy.view(-1, opt.points_num, 2)[:,1].sum(), batch['t'], create_graph=True)[0]
+    vx = (opt.max_dist/opt.max_t)*grad(output_xy.view(-1, opt.points_num, 2)[...,0].sum(), batch['t'], create_graph=True)[0]
+    vy = (opt.max_dist/opt.max_t)*grad(output_xy.view(-1, opt.points_num, 2)[...,1].sum(), batch['t'], create_graph=True)[0]
     vxy = torch.cat([vx, vy], dim=1)
     start_v = vxy.view(-1, opt.points_num, 2)[:,0]/opt.max_speed
     
