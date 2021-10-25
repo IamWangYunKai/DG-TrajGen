@@ -22,7 +22,6 @@ from robo_utils.kitti.torch_dataset import OurDataset as KittiDataset
 from learning.dataset import CARLADataset
 from utils import write_params, to_device
 from carla_utils import parse_yaml_file_unsafe
-from torchvision.utils import save_image
 
 random.seed(datetime.now())
 torch.manual_seed(666)

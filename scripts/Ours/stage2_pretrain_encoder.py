@@ -25,9 +25,8 @@ from learning.model import Generator, EncoderWithV
 from robo_utils.oxford.oxford_dataset import DIVADataset
 from robo_utils.kitti.torch_dataset import OurDataset as KittiDataset
 from learning.dataset import CARLADataset
-from utils import write_params, check_shape, to_device, set_mute
+from utils import write_params, to_device
 from carla_utils import parse_yaml_file_unsafe
-from torchvision.utils import save_image
 
 random.seed(datetime.now())
 torch.manual_seed(666)
@@ -76,8 +75,6 @@ generator.eval()
 trajectory_criterion = torch.nn.MSELoss().to(device)
 
 e_optimizer = torch.optim.Adam(encoder.parameters(), lr=opt.lr, weight_decay=opt.weight_decay)
-e_optimizer_woirm = torch.optim.Adam(encoder_woirm.parameters(), lr=opt.lr, weight_decay=opt.weight_decay)
-
 
 param = parse_yaml_file_unsafe('./param_oxford.yaml')
 train_loader = DataLoader(DIVADataset(param, mode='train', opt=opt), batch_size=opt.batch_size, shuffle=False, num_workers=opt.n_cpu)
