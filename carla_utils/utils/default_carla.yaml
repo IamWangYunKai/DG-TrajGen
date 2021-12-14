@@ -1,0 +1,17 @@
+
+### env
+host: '127.0.0.1'
+port: 2000
+timeout: 2.0
+map_name: Town03
+# pseudo: false
+fast: false
+
+
+### agents
+role_name: 'hero'
+type_id: 'vehicle.tesla.model3'
+
+max_vehicles: 20
+
+

@@ -1,0 +1,5 @@
+python play_images.py /home/ff/dataset_utils/oxford/dataset_radar_sample_large/stereo/centre --models_dir /home/ff/dataset_utils/oxford/robotcar-dataset-sdk/models
+
+python play_velodyne.py /home/ff/dataset_utils/oxford/dataset_radar_sample_large/velodyne_right --mode bin_ptcld
+
+python build_pointcloud.py --laser_dir /media/ff/Dataset/oxford/dataset/2014-05-14-13-46-12/ldmrs --extrinsics_dir ../extrinsics --poses_file /media/ff/Dataset/oxford/dataset/2014-05-14-13-46-12/gps/ins.csv
